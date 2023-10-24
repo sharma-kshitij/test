@@ -31,6 +31,15 @@ app.post("/api/register", async (req, res) => {
   }
 });
 
+app.get("/api/getAll",async(req,res)=>{
+  try {
+    const user = await User.find()
+    res.json(user)
+  } catch (error) {
+    res.json({ status: "error", error });
+  }
+})
+
 app.listen(port, () => {
   console.log(`The server is running on port ${port}`);
 });

@@ -10,7 +10,7 @@ function App() {
     e.preventDefault();
     // console.log(name, email, password);
 
-    const response = await fetch("http://localhost:8080/api/register", {
+    const response = await fetch("https://test-0ijd.onrender.com/api/register", {
       method:"POST",
       headers: {
         "Content-Type": "application/json",
