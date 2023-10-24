@@ -26,9 +26,17 @@ function App() {
     console.log(data)
   };
 
+  const viewAll = async () => {
+    const response = await fetch("http://localhost:8080/api/getAll")
+
+    const data = await response.json()
+    console.log(data)
+  }
+
   return (
     <>
       <h1>Register</h1>
+      <button onClick={()=>viewAll()}>View All</button>
       <form onSubmit={(e) => registerUser(e)}>
         <input
           type="text"
